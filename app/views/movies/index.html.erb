@@ -1,0 +1,14 @@
+<ul>
+<% @movies.each do |movie| %>
+<li> <%= movie.title %>
+(<%= movie.title%>):
+<%= display_flop_or_total_gross(movie) %>
+</li>
+<p>
+    <%= truncate(movie.description, length:35, seperator:',') %>
+</p>
+<p>
+    <%= format_date_time(movie) %>
+</p>
+<% end %>
+</ul>
